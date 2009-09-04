@@ -1,6 +1,6 @@
 %define module   Petal-Utils
 %define version    0.06
-%define release    %mkrel 2
+%define release    %mkrel 3
 
 Name:       perl-%{module}
 Version:    %{version}
