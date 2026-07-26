@@ -1,15 +1,13 @@
 %define upstream_name    Petal-Utils
-%define upstream_version 0.06
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.06
+Release:	6
 
 Summary:	Useful template modifiers for Petal
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Petal-Utils
-Source0:	https://cpan.metacpan.org/authors/id/W/WM/WMCKEE/Petal-Utils-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/W/WM/WMCKEE/Petal-Utils-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -27,7 +25,7 @@ The Petal::Utils package contains commonly used the Petal manpage modifiers
 (or plugins), and bundles them with an easy-to-use installation interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -48,9 +46,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Sat Feb 13 2010 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2010.1
 + Revision: 505297
-- rebuild using %%perl_convert_version
-
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.06-3mdv2010.0
+- rebuild using %0.06 Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.06-3mdv2010.0
 + Revision: 430526
 - rebuild
 
